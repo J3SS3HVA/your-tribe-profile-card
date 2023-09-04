@@ -37,11 +37,14 @@ header {
   justify-content: center;
   align-items: center;
   justify-content: flex-end;
+  width: 100%;
 }
 
 h1 {
-  margin: 2rem 0 1rem;
+  margin: 0 50% 0 0;
   color: rgba(0,239,255,1);
+  width: 100%;
+  text-align: end;
 }
 
 button {
