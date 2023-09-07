@@ -13,26 +13,32 @@ body {
   height: 100vh;
   font-family: monospace;
   background-color: black;
-  color: #10214e;
+  color: rgba(0,239,255,1);
+  background-image: url("https://media2.giphy.com/media/jaOXKCxtBPLieRLI0c/giphy.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.5s;
 }
 
 article {
   position: relative;
   display: flex;
   flex-direction: column;
-  border: 1px solid white;
+  border: 2px solid white;
   align-items: center;
   justify-content: flex-end;
   width: 35vw;
   min-width: 20em;
   border-radius: 1rem;
-  box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
+  box-shadow: 0 0 20px 10px rgb(255 255 255 / 62%);;
   transition: .25s;
+  
+  
 }
 
 header {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -42,9 +48,11 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: center;
+  transition: 0.5s;
 }
 
 h1 {
+  border: solid black;
   margin: 0 0 0 0;
   color: rgb(0, 0, 0);
   width: 20%;
@@ -58,6 +66,21 @@ h1 {
   transform: translateY(-50%);
 }
 
+h2{
+  margin: 0;
+  font-size: medium;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
+
+h3{
+  font-size: small;
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+}
 button {
   position: absolute;
   right: 1rem;
@@ -67,28 +90,13 @@ button {
   padding: .25rem;
   border: none;
   border-radius: 50%;
-  background: rgba(0,239,255,1);
+  background: white;
   transform: scale(.8);
   transition: .25s;
 }
 button:focus {
   outline: none;
-  background: #202592;
-}
-button:focus svg {
-  stroke: rgba(0,239,255,1);
-}
-
-svg {
-  position: absolute;
-  top: calc(1.25rem - 12px);
-  left: calc(1.25rem - 12px);
-  stroke: #4e54c8;
-  transition-delay: .25s;
-}
-button svg:nth-of-type(2) {
-  opacity: 0;
-  transition-delay: 0ms;
+  background: white;
 }
 
 img {
@@ -106,6 +114,8 @@ img {
   background-image: url("https://i.pinimg.com/originals/00/f9/ae/00f9ae2f5be3d8be8c741ef2a0268782.gif");
   background-size: cover;
 }
+
+
 section{
   display: flex;
   width: 100%;
@@ -152,7 +162,7 @@ section
     border-top: solid white;
     box-shadow: inset 1px -4px 20px 1px rgb(0 0 0 / 62%);
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 3rem;
   
@@ -160,29 +170,57 @@ section
 
 #school{
   grid-area: 1 / 2 / 2 / 3;
+  max-height: 20.66px;
+  font-size: 1.4em;
 }
 
 #jobs{
   grid-area: 2 / 2 / 3 / 3;
+  max-height: 20.66px;
+  font-size: 1.4em;
 }
 
 #interns{
   grid-area: 2 / 1 / 3 / 2;
+  max-height: 20.66px;
+  font-size: 1.4em;
 }
 
 #games{
   grid-area: 3 / 1 / 4 / 2;
+  max-height: 20.66px;
+  font-size: 1.4em;
 }
 
 #sports{
   grid-area: 3 / 2 / 4 / 3;
+  max-height: 20.66px;
+  font-size: 1.4em;
+}
+
+#full{
+  grid-area: 1 / 1 / 2 / 2;
+  max-height: 20.66px;
+  font-size: 1.4em;
+}
+
+#age{
+  grid-area: 2 / 1 / 3 / 2;
+  max-height: 20.66px;
+  font-size: 1.4em;
+}
+
+#city{
+  grid-area: 3 / 1 / 4 / 2;
+  max-height: 20.66px;
+  font-size: 1.4em;
 }
 dt {
   margin-top: .25rem;
   padding-top: .25rem;
   /*border-top: 1px solid rgba(0,0,0,0.3);*/
   font-weight: bold;
-  animation: animate2 10s linear infinite;
+  
 }
 /*dt:nth-of-type(1) {
   grid-area: html-dt;
@@ -206,34 +244,43 @@ dd:nth-of-type(2){
 
 p { 
   margin: 0;
-  animation-name: animate2;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
+  
 }
 
 @keyframes animate2{
   0% {
-    color: rgb(0, 183, 255);
+    color: rgba(0,239,255,1);
   }
   20% {
-    color: darkblue;
+    color: rgb(255, 108, 108);
   }
   40% { 
-    color: rgb(0, 183, 255);
+    color: rgba(0,239,255,1);
   }
   60% {
-    color: darkblue;
+    color: rgb(255, 108, 108);
   }
   80% {
-    color: rgb(0, 183, 255);
+    color: rgba(0,239,255,1);
   }
   100% {
-    color: darkblue;
+    color: rgb(255, 108, 108);
   }
   120%{
-    color: rgb(0, 183, 255);
+    color: rgba(0,239,255,1);
   }
 }
+
+@keyframes rotate{
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
 
 .about {
   width: 100%;
@@ -268,15 +315,22 @@ p {
     background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3cbfda35-4958-464e-965d-11561bcbb648/dde6qjw-f6594d08-26cb-4c54-91c1-62b90dfc083d.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzNjYmZkYTM1LTQ5NTgtNDY0ZS05NjVkLTExNTYxYmNiYjY0OFwvZGRlNnFqdy1mNjU5NGQwOC0yNmNiLTRjNTQtOTFjMS02MmI5MGRmYzA4M2QuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.sBjUBKkkZ4jTAX5zEuPJSY_LmhWHR-yKhrEmfdDzLSA");
     background-position-y: 70%;
     height: 10em;
+    transition: 0.5s;
 }
 
 body.expand {
   font-size: 1.15em;
+  background-image: url("https://i.pinimg.com/originals/d0/02/79/d00279a83820aa6f77e1f42e73a6e3f2.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.5s;
 }
 
 body.expand article {
   width: 35vw;
   max-width: 60vw;
+  box-shadow: 0px 0px 28px rgba(255, 0, 0, 0.8), 0 -10px 20px -5px #00c3ff;
+  animation: rotate 1.2s;
   
 }
 
@@ -292,12 +346,28 @@ body.expand button svg:nth-of-type(2) {
 
 body.expand dd {
   font-size: 1.75em;
+  
+}
+
+body.expand dt{
+  animation: animate2 10s linear infinite;
+}
+
+body.expand p{
+  animation-name: animate2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 
 body.expand img {
   width: 10em;
   background-image: url("https://steamuserimages-a.akamaihd.net/ugc/1844793235638220380/77C010E8076978C97A1C603E65DE53F4401A47CA/?imw=200&imh=200&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true");
   background-position: center;
+  box-shadow: 0px 0px 28px rgba(255, 0, 0, 0.8), 0 -10px 20px -5px #00c3ff;
+  transition: 0s;
 }
 
+body.expand h1{
+  box-shadow: 0px 0px 28px rgba(255, 0, 0, 0.8), 0 -10px 20px -5px #00c3ff;
+}
 
