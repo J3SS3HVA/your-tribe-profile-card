@@ -34,6 +34,7 @@ article {
   transition: .25s;
   
   
+  
 }
 
 header {
@@ -247,6 +248,11 @@ p {
   
 }
 
+a{
+  text-decoration: none;
+  color: #00c3ff;
+}
+
 @keyframes animate2{
   0% {
     color: rgba(0,239,255,1);
@@ -285,6 +291,7 @@ p {
 .about {
   width: 100%;
   display: flex;
+  max-height: 160px;
 }
 
 #about1{
