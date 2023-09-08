@@ -121,14 +121,10 @@ section{
   display: flex;
   width: 100%;
 }
-section
+/*info boxes*/
+
 .info1 {
   display: grid;
-  /*grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "html-dd css-dd js-dd"
-    "html-dt css-dt js-dt"
-    ;*/
   justify-items: center;
   align-items: start;
   width: 70%;
@@ -147,11 +143,6 @@ section
 
 .info2{
     display: grid;
-    /*grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-      "html-dd css-dd js-dd"
-      "html-dt css-dt js-dt"
-      ;*/
     justify-items: center;
     align-items: start;
     width: 30%;
@@ -223,16 +214,7 @@ dt {
   font-weight: bold;
   
 }
-/*dt:nth-of-type(1) {
-  grid-area: html-dt;
-}
-dt:nth-of-type(2) {
-  grid-area: css-dt;
-  transform: translateY(1rem);
-}
-dt:nth-of-type(3) {
-  grid-area: js-dt;
-}*/
+
 
 dd {
   margin: 0;
@@ -252,6 +234,9 @@ a{
   text-decoration: none;
   color: #00c3ff;
 }
+
+/*animations*/
+
 
 @keyframes animate2{
   0% {
@@ -286,7 +271,7 @@ a{
   }
 }
 
-
+/*about section*/
 
 .about {
   width: 100%;
