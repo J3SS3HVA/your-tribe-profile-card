@@ -343,12 +343,14 @@ body.expand dd {
 
 body.expand dt{
   animation: animate2 10s linear infinite;
+  animation-direction: alternate;
 }
 
 body.expand p{
   animation-name: animate2;
   animation-duration: 10s;
   animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 body.expand img {
