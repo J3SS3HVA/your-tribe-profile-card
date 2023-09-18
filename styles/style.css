@@ -19,6 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   transition: 0.5s;
+  cursor: none;
 }
 
 article {
@@ -127,7 +128,7 @@ section {
   align-items: start;
   width: 70%;
   margin: 0;
-  padding: 2rem 0 3rem;
+  padding: 1rem 1rem 3rem;
   text-align: center;
   background: rgb(65, 65, 65);
   /*border-bottom: dashed lightblue;*/
@@ -227,19 +228,19 @@ a {
     color: rgba(0, 239, 255, 1);
   }
   20% {
-    color: rgb(255, 108, 108);
+    color: rgb(255, 50, 50);
   }
   40% {
     color: rgba(0, 239, 255, 1);
   }
   60% {
-    color: rgb(255, 108, 108);
+    color: rgb(255, 50, 50);
   }
   80% {
     color: rgba(0, 239, 255, 1);
   }
   100% {
-    color: rgb(255, 108, 108);
+    color: rgb(255, 50, 50);
   }
   120% {
     color: rgba(0, 239, 255, 1);
@@ -266,7 +267,7 @@ a {
 #about1 {
   width: 70%;
   margin-top: 0;
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   border-radius: 0 0 0rem 1rem;
   text-align: center;
   background-color: rgb(75, 75, 75);
@@ -276,11 +277,99 @@ a {
 #about2 {
   width: 30%;
   margin-top: 0;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   border-radius: 0 0 1rem 0rem;
   text-align: center;
   background-color: rgb(75, 75, 75);
   box-shadow: inset 0px 5px 20px 1px rgb(0 0 0 / 62%);
+}
+
+/*3d sphere animation + style */
+
+.plane {
+  width: 120px;
+  height: 120px;
+  transform-style: preserve-3d;
+  display: block;
+}
+.plane.main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* bring back if we are not gonna use the follow mouse function*/
+  /*right: 0;
+  bottom: 0;*/
+  border-radius: 100%;
+  margin: auto;
+  transform: rotateX(60deg) rotateZ(-30deg);
+  -webkit-animation: rotate 20s infinite linear;
+  animation: rotate 20s infinite linear;
+  pointer-events: none;
+}
+.plane.main .circle {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  transform-style: preserve-3d;
+  border-radius: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 60px white, inset 0 0 60px white;
+}
+.plane.main .circle::before,
+.plane.main .circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 10%;
+  height: 10%;
+  border-radius: 100%;
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 0 0 60px 2px white;
+}
+.plane.main .circle::before {
+  transform: translateZ(-90px);
+}
+.plane.main .circle::after {
+  transform: translateZ(90px);
+}
+.plane.main .circle:nth-child(1) {
+  transform: rotateZ(72deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(2) {
+  transform: rotateZ(144deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(3) {
+  transform: rotateZ(216deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(4) {
+  transform: rotateZ(288deg) rotateX(63.435deg);
+}
+.plane.main .circle:nth-child(5) {
+  transform: rotateZ(360deg) rotateX(63.435deg);
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
 }
 
 /* expand content */
