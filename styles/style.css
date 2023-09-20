@@ -247,7 +247,7 @@ a {
   }
 }
 /* rotates entire article when button is pressed */
-@keyframes rotate {
+@keyframes rotate-article {
   from {
     transform: rotate(0deg);
   }
@@ -393,7 +393,7 @@ body.expand article {
   width: 35vw;
   max-width: 60vw;
   box-shadow: 0px 0px 28px rgba(255, 0, 0, 0.8), 0 -10px 20px -5px #00c3ff;
-  animation: rotate 1.2s;
+  animation: rotate-article 1.2s;
 }
 
 body.expand dd {
