@@ -305,6 +305,7 @@ a {
   -webkit-animation: rotate 20s infinite linear;
   animation: rotate 20s infinite linear;
   pointer-events: none;
+  z-index: 1;
 }
 .plane.main .circle {
   width: 120px;
